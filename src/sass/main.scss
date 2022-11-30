@@ -1,4 +1,6 @@
-$primary: yellow;
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'abstracts/variables';
 
 body {
 	background-color: $primary;

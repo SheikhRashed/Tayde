@@ -2,10 +2,9 @@
 import gulp from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
-import imagemin from 'gulp-imagemin';
 import browser from 'browser-sync';
+import imagemin from 'gulp-imagemin';
 
 const browserSync = browser.create();
 const sass = gulpSass(dartSass)
