@@ -40,6 +40,7 @@ gulp.task('imageMin', async function () {
   return gulp.src('src/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.stream())
 
 })
 
