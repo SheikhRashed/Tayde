@@ -3,16 +3,16 @@ footer {
 	overflow-x: hidden;
 	position: relative;
 
-	// &::after {
-	// 	content: '';
-	// 	top: -42px;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 80px;
-	// 	position: absolute;
-	// 	background: url('../images/footer/footer-top-layer.png') left bottom/cover
-	// 		no-repeat;
-	// }
+	&::after {
+		content: '';
+		top: -42px;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		position: absolute;
+		background: url('../images/footer/footer-top-layer.png') left bottom/cover
+			no-repeat;
+	}
 
 	.clips {
 		&-item {

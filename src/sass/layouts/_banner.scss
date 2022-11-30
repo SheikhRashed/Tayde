@@ -1,0 +1,59 @@
+.banner {
+	overflow: hidden;
+	position: relative;
+	padding: 180px 0px;
+	padding-bottom: 320px;
+	background: url('../../images/banner-bg.png') bottom center/cover no-repeat;
+
+	@include max(1200px) {
+		padding: 80px 0px;
+		padding-bottom: 200px;
+	}
+
+	@include max(767px) {
+		padding-bottom: 120px;
+	}
+
+	&-content-info {
+		@include max(1200px) {
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 80px;
+			color: $secondary;
+			line-height: 90px;
+			font-weight: 700;
+			text-transform: capitalize;
+
+			@include max(991px) {
+				font-size: 58px;
+				line-height: 68px;
+			}
+
+			@include max(767px) {
+				font-size: 48px;
+				line-height: 58px;
+			}
+
+			@include max(575px) {
+				font-size: 32px;
+				line-height: 42px;
+			}
+		}
+
+		p {
+			color: #74787c;
+			font-size: 20px;
+			line-height: 28px;
+			margin-bottom: 50px;
+			@include max(1200px) {
+				margin-bottom: 24px;
+			}
+
+			@include max(767px) {
+				color: #333;
+			}
+		}
+	}
+}

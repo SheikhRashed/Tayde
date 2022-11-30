@@ -1,0 +1,205 @@
+.countdowns {
+	overflow: hidden;
+	position: relative;
+	margin-top: -160px;
+
+	@include max(767px) {
+		margin-top: 0px;
+		padding: 30px 0px;
+		padding-bottom: 60px;
+	}
+
+	&-content {
+		display: flex;
+		max-width: 90%;
+		margin: 0px auto;
+		overflow: hidden;
+		padding: 48px 80px;
+		padding-right: 120px;
+		position: relative;
+		border-radius: 16px;
+		align-items: center;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		justify-content: space-between;
+
+		@include max(1200px) {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			padding: 30px 0px;
+		}
+
+		@include max(767px) {
+			max-width: 100%;
+			overflow: visible;
+		}
+
+		&::after {
+			content: '';
+			left: -1px;
+			top: 50%;
+			width: 4px;
+			height: 80px;
+			position: absolute;
+			border-radius: 12px;
+			background-color: $primary;
+			transform: translateY(-50%);
+
+			@include max(767px) {
+				top: 0;
+				left: 50%;
+				width: 80px;
+				height: 4px;
+				transform: translateY(0) translateX(-50%);
+			}
+		}
+
+		h6 {
+			font-size: 36px;
+			line-height: 46px;
+			color: $secondary;
+			font-weight: 600;
+			max-width: 280px;
+
+			@include max(1200px) {
+				max-width: 100%;
+				padding-bottom: 24px;
+			}
+
+			@include max(991px) {
+				font-size: 28px;
+				line-height: 38px;
+			}
+
+			@include max(575px) {
+				font-size: 18px;
+				line-height: 28px;
+				padding-bottom: 12px;
+			}
+		}
+
+		button {
+			top: 50%;
+			right: calc(-50% + 28px);
+			color: #fff;
+			font-size: 18px;
+			width: 100%;
+			position: absolute;
+			line-height: 40.38px;
+			transform: translateY(-50%) rotate(270deg);
+			text-transform: capitalize;
+			background-color: $primary;
+			padding: 9px 0px;
+			transition: all 0.2s linear;
+
+			@include max(767px) {
+				right: 50%;
+				width: 50%;
+				height: 48px;
+				line-height: 28px;
+				position: absolute;
+				top: calc(50% + 36px);
+				border-radius: 6px;
+				transform: rotate(0deg) translateY(100%) translateX(50%);
+			}
+			@include max(575px) {
+				top: calc(50% + 20px);
+			}
+
+			&:hover {
+				background-color: $secondary;
+			}
+		}
+	}
+
+	.countdown {
+		display: flex;
+		gap: 80px;
+		align-items: center;
+
+		@include max(991px) {
+			gap: 40px;
+		}
+
+		@include max(575px) {
+			gap: 20px;
+		}
+
+		@include max(767px) {
+			padding-bottom: 24px;
+		}
+
+		& > div {
+			text-align: center;
+			position: relative;
+
+			&:nth-last-child(1) {
+				&::after,
+				&::before {
+					display: none;
+				}
+			}
+
+			&::after,
+			&::before {
+				content: '';
+				width: 8px;
+				height: 8px;
+				right: -40px;
+				position: absolute;
+				border-radius: 50%;
+				top: calc(50% - 12px);
+				background-color: #d6dae2;
+				transform: translateY(-50%);
+
+				@include max(991px) {
+					right: -20px;
+				}
+
+				@include max(575px) {
+					right: -14px;
+				}
+
+				@include max(767px) {
+					width: 6px;
+					height: 6px;
+					top: 50%;
+				}
+			}
+
+			&::before {
+				top: calc(50% - 24px);
+
+				@include max(767px) {
+					top: calc(50% - 12px);
+				}
+			}
+
+			p {
+				font-size: 16px;
+				color: #ff6f96;
+				line-height: 40px;
+				font-weight: 600;
+				text-transform: uppercase;
+				@include max(767px) {
+					font-size: 12px;
+					line-height: 22px;
+				}
+			}
+		}
+		span {
+			font-size: 48px;
+			font-weight: 700;
+			color: $secondary;
+			line-height: 40px;
+			display: block;
+			text-transform: capitalize;
+
+			@include max(767px) {
+				font-size: 28px;
+				line-height: 38px;
+			}
+		}
+	}
+}

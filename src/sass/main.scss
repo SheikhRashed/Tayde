@@ -119,6 +119,9 @@ a {
 /*\ Components  \*/
 
 @import 'components/button';
-@import 'components/header';
-@import 'components/sidebar';
-@import 'components/footer';
+
+@import 'layouts/header';
+@import 'layouts/banner';
+@import 'layouts/countdown';
+@import 'layouts/sidebar';
+@import 'layouts/footer';

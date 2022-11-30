@@ -94,7 +94,7 @@ a {
 
 /*\ Components  \*/
 .button {
-  display: flex;
+  display: inline-flex;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -273,6 +273,282 @@ a {
   }
 }
 
+.banner {
+  overflow: hidden;
+  position: relative;
+  padding: 180px 0px;
+  padding-bottom: 320px;
+  background: url("../../images/banner-bg.png") bottom center/cover no-repeat;
+}
+@media (max-width: 1200px) {
+  .banner {
+    padding: 80px 0px;
+    padding-bottom: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner-content-info {
+    text-align: center;
+  }
+}
+.banner-content-info h1 {
+  font-size: 80px;
+  color: #253962;
+  line-height: 90px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media (max-width: 991px) {
+  .banner-content-info h1 {
+    font-size: 58px;
+    line-height: 68px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-content-info h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media (max-width: 575px) {
+  .banner-content-info h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+.banner-content-info p {
+  color: #74787c;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  .banner-content-info p {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-content-info p {
+    color: #333;
+  }
+}
+
+.countdowns {
+  overflow: hidden;
+  position: relative;
+  margin-top: -160px;
+}
+@media (max-width: 767px) {
+  .countdowns {
+    margin-top: 0px;
+    padding: 30px 0px;
+    padding-bottom: 60px;
+  }
+}
+.countdowns-content {
+  display: flex;
+  max-width: 90%;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 48px 80px;
+  padding-right: 120px;
+  position: relative;
+  border-radius: 16px;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .countdowns-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .countdowns-content {
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+.countdowns-content::after {
+  content: "";
+  left: -1px;
+  top: 50%;
+  width: 4px;
+  height: 80px;
+  position: absolute;
+  border-radius: 12px;
+  background-color: #fe5a86;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .countdowns-content::after {
+    top: 0;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+.countdowns-content h6 {
+  font-size: 36px;
+  line-height: 46px;
+  color: #253962;
+  font-weight: 600;
+  max-width: 280px;
+}
+@media (max-width: 1200px) {
+  .countdowns-content h6 {
+    max-width: 100%;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .countdowns-content h6 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+@media (max-width: 575px) {
+  .countdowns-content h6 {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 12px;
+  }
+}
+.countdowns-content button {
+  top: 50%;
+  right: calc(-50% + 28px);
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  position: absolute;
+  line-height: 40.38px;
+  transform: translateY(-50%) rotate(270deg);
+  text-transform: capitalize;
+  background-color: #fe5a86;
+  padding: 9px 0px;
+  transition: all 0.2s linear;
+}
+@media (max-width: 767px) {
+  .countdowns-content button {
+    right: 50%;
+    width: 50%;
+    height: 48px;
+    line-height: 28px;
+    position: absolute;
+    top: calc(50% + 36px);
+    border-radius: 6px;
+    transform: rotate(0deg) translateY(100%) translateX(50%);
+  }
+}
+@media (max-width: 575px) {
+  .countdowns-content button {
+    top: calc(50% + 20px);
+  }
+}
+.countdowns-content button:hover {
+  background-color: #253962;
+}
+.countdowns .countdown {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .countdowns .countdown {
+    gap: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .countdowns .countdown {
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .countdowns .countdown {
+    padding-bottom: 24px;
+  }
+}
+.countdowns .countdown > div {
+  text-align: center;
+  position: relative;
+}
+.countdowns .countdown > div:nth-last-child(1)::after, .countdowns .countdown > div:nth-last-child(1)::before {
+  display: none;
+}
+.countdowns .countdown > div::after, .countdowns .countdown > div::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  right: -40px;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 12px);
+  background-color: #d6dae2;
+  transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .countdowns .countdown > div::after, .countdowns .countdown > div::before {
+    right: -20px;
+  }
+}
+@media (max-width: 575px) {
+  .countdowns .countdown > div::after, .countdowns .countdown > div::before {
+    right: -14px;
+  }
+}
+@media (max-width: 767px) {
+  .countdowns .countdown > div::after, .countdowns .countdown > div::before {
+    width: 6px;
+    height: 6px;
+    top: 50%;
+  }
+}
+.countdowns .countdown > div::before {
+  top: calc(50% - 24px);
+}
+@media (max-width: 767px) {
+  .countdowns .countdown > div::before {
+    top: calc(50% - 12px);
+  }
+}
+.countdowns .countdown > div p {
+  font-size: 16px;
+  color: #ff6f96;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .countdowns .countdown > div p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.countdowns .countdown span {
+  font-size: 48px;
+  font-weight: 700;
+  color: #253962;
+  line-height: 40px;
+  display: block;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .countdowns .countdown span {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
 .sidebar {
   top: 80px;
   left: 0;
@@ -325,6 +601,8 @@ a {
   }
 }
 .sidebar .social {
+  max-width: 80%;
+  margin: 0px auto;
   padding-bottom: 80px;
 }
 .sidebar .social ul {
@@ -348,6 +626,15 @@ footer {
   z-index: 1;
   overflow-x: hidden;
   position: relative;
+}
+footer::after {
+  content: "";
+  top: -42px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  background: url("../images/footer/footer-top-layer.png") left bottom/cover no-repeat;
 }
 footer .clips-item {
   right: -80px;
