@@ -37,7 +37,7 @@ gulp.task('minifyJS', async function () {
 
 // Image Files 
 gulp.task('imageMin', async function () {
-  return gulp.src('src/images/*')
+  return gulp.src('src/images/**/*.{gif,jpg,png,svg}')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
     .pipe(browserSync.stream())
@@ -51,7 +51,7 @@ gulp.task('serve', async function () {
     server: 'dist/'
   })
 
-  gulp.watch('src/images/*', ['imageMin']);
+  gulp.watch('src/images/**/*.{gif,jpg,png,svg}', ['imageMin']);
   gulp.watch('src/sass/main.scss', ['sass']);
   gulp.watch('src/js/*.js', ['minifyJS']).on('change', browserSync.reload);
   gulp.watch('src/*.html', ['copyHtml']).on('change', browserSync.reload);
