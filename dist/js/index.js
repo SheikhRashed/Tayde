@@ -1,0 +1,1 @@
+"use strict";function HI(e){return setTimeout(console.log("Hello world"),e)}HI(1e4);
