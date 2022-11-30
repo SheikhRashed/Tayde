@@ -4,6 +4,19 @@
 	width: 100%;
 	z-index: 999;
 	position: sticky;
+
+	&::after {
+		content: '';
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 60px;
+		position: absolute;
+		top: calc(100% - 24px);
+		background: url('../../images/footer/footer-top-layer.png') left bottom/cover
+			no-repeat;
+	}
+
 	&-top {
 		background-color: $primary;
 
@@ -163,6 +176,12 @@
 
 					li {
 						flex-shrink: 0;
+
+						&:nth-child(1) {
+							@include max(767px) {
+								display: none;
+							}
+						}
 					}
 				}
 			}

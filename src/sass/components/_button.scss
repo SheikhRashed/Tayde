@@ -13,7 +13,8 @@
 	background-color: $primary;
 	transition: all 0.2s linear;
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: #fff;
 		background-color: $secondary;
 	}
