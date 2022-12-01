@@ -18,7 +18,7 @@ document.querySelector('.sidebar').addEventListener('click', function (event) {
 
   if (event.target.matches('#menubar') || !event.target.closest('.sidebar-content')) {
     document.querySelector('.sidebar').classList.remove('show')
-    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('body').classList.remove('overflow-hidden');
   }
 })
 
