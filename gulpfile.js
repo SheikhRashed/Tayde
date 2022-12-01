@@ -64,4 +64,4 @@ gulp.task('message', async function () {
   return console.log('Gulp is running...');
 })
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve', 'imageMin', 'copyHtml', 'sass', 'minifyJS']);
