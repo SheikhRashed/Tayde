@@ -3,7 +3,7 @@
 	position: relative;
 	padding: 180px 0px;
 	padding-bottom: 320px;
-	background: url('../../images/banner-bg.png') bottom center/cover no-repeat;
+	background: url('../images/banner-bg.png') bottom center/cover no-repeat;
 
 	@include max(1200px) {
 		padding: 80px 0px;
